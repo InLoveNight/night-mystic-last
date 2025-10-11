@@ -4,6 +4,11 @@ export default defineAppConfig({
             slots: {
                 base: 'cursor-pointer rounded-lg'
             }
+        },
+        navigationMenu:{
+            slots:{
+                link:'cursor-pointer rounded-lg'
+            }
         }
     }
 })

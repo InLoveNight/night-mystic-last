@@ -1,2 +1,10 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@font-face {
+    font-family: LogoFont;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/font/logo-font.otf") format("opentype");
+}

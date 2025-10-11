@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import BaseLayout from '~/layouts/BaseLayout.vue';
 
 
@@ -7,15 +7,9 @@ import BaseLayout from '~/layouts/BaseLayout.vue';
 <template>
     <BaseLayout>
         <template #header>
-            <HeaderGlobal>
-
-            </HeaderGlobal>
+            <LazyHeaderGlobal></LazyHeaderGlobal>
         </template>
 
-        {{ $t('title') }}
-
-        
+        亲密包
     </BaseLayout>
 </template>
-
-<style scoped></style>

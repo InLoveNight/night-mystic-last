@@ -3,5 +3,6 @@
 </script>
 
 <template>
-    <slot/>
+    <slot />
+    <LazyFooter />
 </template>

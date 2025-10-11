@@ -1,21 +1,13 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import BaseLayout from '~/layouts/BaseLayout.vue';
-
-
 </script>
 
 <template>
     <BaseLayout>
         <template #header>
-            <HeaderGlobal>
-
-            </HeaderGlobal>
+            <LazyHeaderGlobal />
         </template>
 
-        {{ $t('title') }}
-
-        
+        亲密工具
     </BaseLayout>
 </template>
-
-<style scoped></style>

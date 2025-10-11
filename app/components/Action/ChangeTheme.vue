@@ -3,9 +3,11 @@
 </script>
 
 <template>
-    <div>
-        <UButton @click="$colorMode.preference = 'dark'">dark</UButton>
-        <UButton @click="$colorMode.preference = 'light'">light</UButton>
-        <UButton @click="$colorMode.preference = 'system'">system</UButton>
-    </div>
+    <UColorModeButton>
+        <template #fallback>
+            <UButton loading
+                     variant="ghost"
+                     color="neutral" />
+        </template>
+    </UColorModeButton>
 </template>
