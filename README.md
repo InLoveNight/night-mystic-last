@@ -24,3 +24,8 @@ type Card = {
     data: CardContent[]
 }
 ```
+
+
+# 其他
+
+[邮箱服务](https://resend.com/)

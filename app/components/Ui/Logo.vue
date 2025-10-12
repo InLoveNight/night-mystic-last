@@ -9,5 +9,8 @@
                active-class=" text-black dark:text-white">
             night mystic
         </ULink>
+        <template #fallback>
+            {{ $t('title') }}
+        </template>
     </ClientOnly>
 </template>
