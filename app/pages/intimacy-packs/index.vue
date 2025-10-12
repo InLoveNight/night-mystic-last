@@ -10,6 +10,19 @@ import BaseLayout from '~/layouts/BaseLayout.vue';
             <LazyHeaderGlobal></LazyHeaderGlobal>
         </template>
 
-        亲密包
+        <LazyUContainer>
+            <LazyUPageHeader :title="$t('intimacy-packs.header.title')"
+                             :description="$t('intimacy-packs.header.description')"
+                             :links="[{
+                                label:$t('intimacy-packs.header.action'),
+                                trailingIcon:'lucide:arrow-up-right',
+                                variant:'soft'
+                             }]"
+                             >
+
+            </LazyUPageHeader>
+        </LazyUContainer>
+
+
     </BaseLayout>
 </template>

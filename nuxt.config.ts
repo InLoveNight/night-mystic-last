@@ -5,10 +5,11 @@ export default defineNuxtConfig({
     modules: ['@nuxt/ui', '@nuxtjs/i18n'],
     css: ['~/assets/css/base.css'],
     ui: {
-        fonts: false
+        // fonts: false
     },
     colorMode: {
-        storageKey: 'night-mystic-color'
+        storageKey: 'night-mystic-color',
+        preference: 'system'
     },
     i18n: {
         defaultLocale: 'zh-CN',
@@ -21,6 +22,9 @@ export default defineNuxtConfig({
             { code: 'en', name: 'English', file: 'en.json' },
             { code: 'zh-CN', name: '简体中文', file: 'zh-CN.json' }
         ]
+    },
+    fonts: {
+        provider:'bunny'
     },
     devServer: {
         host: '0.0.0.0'

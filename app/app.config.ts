@@ -9,6 +9,11 @@ export default defineAppConfig({
             slots:{
                 link:'cursor-pointer rounded-lg'
             }
+        },
+        pageCard:{
+            slots:{
+                root:'cursor-pointer'
+            }
         }
     }
 })

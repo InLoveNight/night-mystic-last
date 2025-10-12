@@ -4,5 +4,13 @@
         "home": "Home",
         "intimacy-tool": "Intimacy Tool",
         "intimacy-packs": "Intimacy Packs"
+    },
+    "hero": {
+        "headline": "你的亲密工具包",
+        "description": "帮助提升亲密时光，无论独处、与伴侣还是创意探索。数据全本地存储（IndexedDB），无需登录，确保彻底隐私。通过无限个性化解锁神秘夜晚。"
+    },
+    "banner": {
+        "title": "We recommend reading 'How to use' before getting started.",
+        "action1-label": "How To Use"
     }
 }

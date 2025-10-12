@@ -1,5 +1,6 @@
 {
     "title": "夜私",
+    "coming-soon": "即将发布",
     "menu": {
         "home": "首页",
         "intimacy-tool": "亲密工具",
@@ -7,10 +8,47 @@
     },
     "hero": {
         "headline": "你的亲密工具包",
-        "description": "帮助提升亲密时光，无论独处、与伴侣还是创意探索。数据全本地存储（IndexedDB），无需登录，确保彻底隐私。通过无限个性化解锁神秘夜晚。"
+        "description": "帮助提升亲密时光，无论独处、与伴侣还是创意探索。数据全本地存储，无需登录，确保彻底隐私。通过无限个性化解锁神秘夜晚。"
     },
     "banner": {
-        "title": "我们非常重视您的意见",
-        "action1-label": "意见反馈"
+        "title": "我们建议您先查看我们的使用说明。",
+        "action1-label": "使用说明"
+    },
+    "intimacy-tool": {
+        "header": {
+            "title": "亲密工具",
+            "description": "我们在不断添加亲密工具，以能给您带来更丰富的体验 ~"
+        },
+        "items": {
+            "card": {
+                "name": "亲密卡",
+                "description": "两种玩法，自选与随机，最多支持 50 个卡片自定义！"
+            },
+            "truth-or-dare": {
+                "name": "真心话大冒险",
+                "description": "最多支持 50 个真心话，50 个大冒险自定义！"
+            },
+            "roulette": {
+                "name": "亲密轮盘赌",
+                "description": "最多支持 10 个骰子，每个骰子 10 个自定义内容！"
+            }
+        }
+    },
+    "intimacy-packs": {
+        "header": {
+            "title": "亲密包",
+            "description": "在这里您可以导入亲密包，导入到本地后您可以完全自定义其内容。",
+            "action": "使用帮助"
+        }
+    },
+    "seo":{
+        "home":{
+            "title":"亲密工具包。定制你的夜晚灵感。",
+            "description":"Night Mystic亲密工具包，为情侣、夫妻、BDSM 爱好者设计。自定义真心话大冒险、骰子玩法，隐私保护，无需登录，随时激发亲密灵感！"
+        },
+        "intimacy-tool":{
+            "title":"这里有丰富的亲密工具，",
+            "description":""
+        }
     }
 }
