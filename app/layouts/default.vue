@@ -19,5 +19,4 @@ useSeoMeta({
 
 <template>
     <slot />
-    <LazyFooter />
 </template>

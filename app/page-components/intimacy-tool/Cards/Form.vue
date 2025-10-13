@@ -1,0 +1,35 @@
+<script lang="ts" setup>
+import type { schemaCard } from '~~/shared/zod-schema';
+
+const data = defineModel<schemaCard.Card>('data', { required: true })
+
+
+</script>
+
+<template>
+    <UForm class="space-y-5">
+        <UFormField label="Name"
+                    required
+                    name="name">
+            <UInput v-model="data.name"
+                    size="xl" />
+        </UFormField>
+
+        <UFormField label="Tags"
+                    name="tags">
+            <UInputTags v-model="data.tags"
+                        class="w-full"
+                        :max="3"
+                        :max-length="15"
+                        size="xl" />
+        </UFormField>
+
+        <UFormField label="Description"
+                    name="description">
+            <UTextarea v-model="data.description"
+                       size="xl"
+                       autoresize
+                       :maxrows="3" />
+        </UFormField>
+    </UForm>
+</template>

@@ -20,7 +20,7 @@ const items = ref<DropdownMenuItem[]>([
         onSelect: () => emits('import')
     },
     {
-        label: props.newButtonLabel ?? $t('action.add'),
+        label: props.newButtonLabel ?? $t('action.new'),
         icon: 'lucide:plus',
         onSelect: () => emits('new')
     },

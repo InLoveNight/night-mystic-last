@@ -21,6 +21,16 @@ export default defineAppConfig({
                 item:'space-x-1 cursor-pointer !px-3 !py-2',
                 content:'min-w-auto'
             }
+        },
+        input:{
+            slots:{
+                root:'w-full'
+            }
+        },
+        textarea:{
+            slots:{
+                root:'w-full'
+            }
         }
     }
 })

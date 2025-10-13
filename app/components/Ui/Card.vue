@@ -13,7 +13,7 @@ defineEmits<{
 </script>
 
 <template>
-    <div class="bg-elevated/50 rounded-lg p-5">
+    <div class="bg-elevated rounded-lg p-5">
         <div :class="title && action ? 'flex justify-between items-center mb-5' : ''">
             <slot name="tite">
                 <h2 v-if="title"

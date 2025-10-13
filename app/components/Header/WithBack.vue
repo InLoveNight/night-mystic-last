@@ -4,6 +4,7 @@ const router = useRouter()
 
 const { defaultBackAction = true } = defineProps<{
     defaultBackAction?: boolean
+    title?: string
 }>()
 
 const emits = defineEmits<{
@@ -21,8 +22,8 @@ const handleBack = () => {
 </script>
 
 <template>
-    <LazyLayout7XL class=" sticky top-2">
-        <div class="flex justify-between items-center relative rounded-lg p-5 mt-2 bg-elevated/75 backdrop-blur z-10">
+    <LazyLayout7XL class="sticky top-2 z-50">
+        <div class="flex justify-between items-center relative rounded-lg p-5 mt-2 bg-elevated/75 backdrop-blur">
             <div>
                 <slot name="left">
                     <UIcon @click="handleBack"
@@ -33,7 +34,10 @@ const handleBack = () => {
             </div>
 
             <div class=" absolute left-1/2 -translate-x-1/2">
-                <slot />
+                <slot name="title">
+                    <h1 class=" font-black"
+                        v-if="title">{{ title }}</h1>
+                </slot>
             </div>
 
             <div>

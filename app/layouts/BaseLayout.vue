@@ -19,4 +19,5 @@ const actions = ref<ButtonProps[]>([
     <UMain>
         <slot />
     </UMain>
+    <LazyFooter />
 </template>
