@@ -15,7 +15,7 @@ import BaseLayout from '~/layouts/BaseLayout.vue';
                              :description="$t('intimacy-packs.header.description')"
                              :links="[{
                                 label:$t('intimacy-packs.header.action'),
-                                trailingIcon:'lucide:arrow-up-right',
+                                trailingIcon:'lucide:badge-help',
                                 variant:'soft'
                              }]"
                              >

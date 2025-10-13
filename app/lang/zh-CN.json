@@ -14,6 +14,15 @@
         "title": "我们建议您先查看我们的使用说明。",
         "action1-label": "使用说明"
     },
+    "action": {
+        "add": "添加",
+        "import": "导入",
+        "new": "新增",
+        "save": "保存"
+    },
+    "result": {
+        "no-data": "本地无数据，请通过上方按钮进行导入或新增。"
+    },
     "intimacy-tool": {
         "header": {
             "title": "亲密工具",
@@ -41,14 +50,14 @@
             "action": "使用帮助"
         }
     },
-    "seo":{
-        "home":{
-            "title":"亲密工具包。定制你的夜晚灵感。",
-            "description":"Night Mystic亲密工具包，为情侣、夫妻、BDSM 爱好者设计。自定义真心话大冒险、骰子玩法，隐私保护，无需登录，随时激发亲密灵感！"
+    "seo": {
+        "home": {
+            "title": "亲密工具包。定制你的夜晚灵感。",
+            "description": "Night Mystic亲密工具包，为情侣、夫妻、BDSM 爱好者设计。自定义真心话大冒险、骰子玩法，隐私保护，无需登录，随时激发亲密灵感！"
         },
-        "intimacy-tool":{
-            "title":"这里有丰富的亲密工具，",
-            "description":""
+        "intimacy-tool": {
+            "title": "这里有丰富的亲密工具，",
+            "description": ""
         }
     }
 }

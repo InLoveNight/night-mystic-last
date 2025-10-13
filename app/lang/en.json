@@ -1,16 +1,63 @@
 {
     "title": "Night Mystic",
+    "coming-soon": "Coming Soon",
     "menu": {
         "home": "Home",
         "intimacy-tool": "Intimacy Tool",
         "intimacy-packs": "Intimacy Packs"
     },
     "hero": {
-        "headline": "你的亲密工具包",
-        "description": "帮助提升亲密时光，无论独处、与伴侣还是创意探索。数据全本地存储（IndexedDB），无需登录，确保彻底隐私。通过无限个性化解锁神秘夜晚。"
+        "headline": "Your Intimate Toolkit",
+        "description": "Elevate your intimate moments, whether solo, with a partner, or exploring creatively. Data stored locally, no login required, ensuring complete privacy. Unlock mystical nights with endless personalization."
     },
     "banner": {
         "title": "We recommend reading 'How to use' before getting started.",
         "action1-label": "How To Use"
+    },
+    "action": {
+        "add": "Add",
+        "import": "Import",
+        "new": "New",
+        "save":"Save It"
+    },
+    "result":{
+        "no-data":"No local data available. Please import or add new content using the button above."
+    },
+    "intimacy-tool": {
+        "header": {
+            "title": "Intimate Tools",
+            "description": "We're constantly adding new intimate tools to enrich your experience ~"
+        },
+        "items": {
+            "card": {
+                "name": "Intimate Cards",
+                "description": "Two play modes, self-selected or random, with up to 50 customizable cards!"
+            },
+            "truth-or-dare": {
+                "name": "Truth or Dare",
+                "description": "Up to 50 customizable truths and 50 customizable dares!"
+            },
+            "roulette": {
+                "name": "Intimate Roulette",
+                "description": "Up to 10 dice, each with 10 customizable options!"
+            }
+        }
+    },
+    "intimacy-packs": {
+        "header": {
+            "title": "Intimate Packs",
+            "description": "Here you can import intimate packs and fully customize their content after importing locally.",
+            "action": "How to Use"
+        }
+    },
+    "seo": {
+        "home": {
+            "title": "Intimate Toolkit. Customize Your Nightly Spark.",
+            "description": "Night Mystic Intimate Toolkit, designed for couples, partners, and BDSM enthusiasts. Customize truth or dare, dice games, with privacy protection, no login required, sparking intimacy anytime!"
+        },
+        "intimacy-tool": {
+            "title": "Explore a Variety of Intimate Tools",
+            "description": ""
+        }
     }
 }

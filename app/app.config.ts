@@ -14,6 +14,13 @@ export default defineAppConfig({
             slots:{
                 root:'cursor-pointer'
             }
+        },
+        dropdownMenu:{
+            slots:{
+                group:'space-y-1.5',
+                item:'space-x-1 cursor-pointer !px-3 !py-2',
+                content:'min-w-auto'
+            }
         }
     }
 })

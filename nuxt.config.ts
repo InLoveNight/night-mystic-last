@@ -7,6 +7,12 @@ export default defineNuxtConfig({
     ui: {
         // fonts: false
     },
+    icon: {
+        class: 'align-middle'
+    },
+    fonts: {
+        provider: 'bunny'
+    },
     colorMode: {
         storageKey: 'night-mystic-color',
         preference: 'system'
@@ -22,9 +28,6 @@ export default defineNuxtConfig({
             { code: 'en', name: 'English', file: 'en.json' },
             { code: 'zh-CN', name: '简体中文', file: 'zh-CN.json' }
         ]
-    },
-    fonts: {
-        provider:'bunny'
     },
     devServer: {
         host: '0.0.0.0'

@@ -7,6 +7,7 @@ const list = ref([
         description: $t('intimacy-tool.items.card.description'),
         color: 'bg-emerald-500/40',
         icon: 'streamline-stickies-color:validation-1-duo',
+        to: '/intimacy-tool/cards'
     },
     {
         title: $t('intimacy-tool.items.truth-or-dare.name'),
@@ -42,7 +43,8 @@ const list = ref([
 
                 <template v-for="item in list">
                     <div class="rounded-lg p-5 relative"
-                         :class="item.comingSoon ? `${item.color} grayscale cursor-not-allowed` : `${item.color} cursor-pointer`">
+                         :class="item.comingSoon ? `${item.color} grayscale cursor-not-allowed` : `${item.color} cursor-pointer`"
+                         @click="item.to ? $router.push($localePath(item.to)) : ''">
 
                         <div class="flex gap-2 items-center">
                             <h3 class="text-xl font-black my-2">{{ item.title }}</h3>
