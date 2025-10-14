@@ -1,13 +1,24 @@
 <script lang="ts" setup>
 import type { schemaCard } from '~~/shared/zod-schema';
 
+const form = useTemplateRef('form')
+
 const data = defineModel<schemaCard.Card>('data', { required: true })
 
+defineEmits<{
+    submit: []
+}>()
+
+defineExpose({
+    form
+})
 
 </script>
 
 <template>
-    <UForm class="space-y-5">
+    <UForm class="space-y-5"
+           ref="form"
+           @submit="$emit('submit')">
         <UFormField label="Name"
                     required
                     name="name">
@@ -16,7 +27,8 @@ const data = defineModel<schemaCard.Card>('data', { required: true })
         </UFormField>
 
         <UFormField label="Tags"
-                    name="tags">
+                    name="tags"
+                    description="最多可以添加 3 个标签">
             <UInputTags v-model="data.tags"
                         class="w-full"
                         :max="3"

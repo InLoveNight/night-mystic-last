@@ -4,7 +4,8 @@
     "menu": {
         "home": "Home",
         "intimacy-tool": "Intimacy Tool",
-        "intimacy-packs": "Intimacy Packs"
+        "intimacy-packs": "Intimacy Packs",
+        "contact": "Contact"
     },
     "hero": {
         "headline": "Your Intimate Toolkit",
@@ -18,10 +19,15 @@
         "add": "Add",
         "import": "Import",
         "new": "New",
-        "save":"Save It"
+        "save": "Save It",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "edit": "Edit",
+        "delete": "Delete"
     },
-    "result":{
-        "no-data":"No local data available. Please import or add new content using the button above."
+    "result": {
+        "no-data": "No local data available. Please import or add new content using the button above."
     },
     "intimacy-tool": {
         "header": {
@@ -46,8 +52,7 @@
     "intimacy-packs": {
         "header": {
             "title": "Intimate Packs",
-            "description": "Here you can import intimate packs and fully customize their content after importing locally.",
-            "action": "How to Use"
+            "description": "Here you can import intimate packs and fully customize their content after importing locally."
         }
     },
     "seo": {

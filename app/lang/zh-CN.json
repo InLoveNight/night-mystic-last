@@ -4,24 +4,31 @@
     "menu": {
         "home": "首页",
         "intimacy-tool": "亲密工具",
-        "intimacy-packs": "亲密包"
+        "intimacy-packs": "亲密包",
+        "contact":"联系"
     },
     "hero": {
         "headline": "你的亲密工具包",
         "description": "帮助提升亲密时光，无论独处、与伴侣还是创意探索。数据全本地存储，无需登录，确保彻底隐私。通过无限个性化解锁神秘夜晚。"
     },
     "banner": {
-        "title": "我们建议您先查看我们的使用说明。",
-        "action1-label": "使用说明"
+        "title": "我们建议您先查看我们的使用帮助。",
+        "action1-label": "使用帮助"
     },
     "action": {
         "add": "添加",
         "import": "导入",
         "new": "新增",
-        "save": "保存"
+        "save": "保存",
+        "submit": "提交",
+        "cancel": "取消",
+        "confirm":"确认",
+        "edit": "编辑",
+        "delete": "删除"
     },
     "result": {
-        "no-data": "本地无数据，请通过上方按钮进行导入或新增。"
+        "no-data": "本地无数据，请通过上方按钮进行导入或新增。",
+        "content-no-data": "无数据，请通过上方按钮进行添加。"
     },
     "intimacy-tool": {
         "header": {
@@ -46,8 +53,7 @@
     "intimacy-packs": {
         "header": {
             "title": "亲密包",
-            "description": "在这里您可以导入亲密包，导入到本地后您可以完全自定义其内容。",
-            "action": "使用帮助"
+            "description": "在这里您可以导入亲密包，导入到本地后您可以完全自定义其内容。"
         }
     },
     "seo": {

@@ -1,6 +1,6 @@
 import type { LocaleDataOption } from "~/types/some"
 import { schemaCard } from "#shared/zod-schema"
-
+import dexieDb, { execute } from "~/libs/dexie"
 
 export const useLocaleCards = (
     options: LocaleDataOption = { immediate: false }
@@ -15,7 +15,30 @@ export const useLocaleCards = (
         time: 0
     })
 
-    const actionCards = {}
+    const actionCards = {
+        insert: async () => (await execute(() => dexieDb.cards.add(toRaw(card.value)))).success,
+        updateById: async (id: string) => {
+            const { result } = await execute(() => dexieDb.cards.update(id, toRaw(card.value)))
+            return !!result
+        },
+        queryAll: async () => {
+            const { result } = await execute(() => dexieDb.cards.toArray())
+            if (result) cards.value = result
+        },
+        queryById: async (id: string) => {
+            const { success, result } = await execute(() => dexieDb.cards.get(id))
+            if (success && result) {
+                card.value = result
+                return true
+            }
+            return false
+        },
+        deleteById: async (id: string) => {
+            await dexieDb.cards.delete(id)
+            await actionCards.queryAll()
+        }
+    }
+
     const actionContent = {
         insert: () => {
             card.value.contents.unshift({ ...toRaw(cardContent.value) })
@@ -35,8 +58,12 @@ export const useLocaleCards = (
             return false
         },
         reset: () => {
-            cardContent.value = { content: '' }
+            cardContent.value = { content: '', time: 0 }
         }
+    }
+
+    if (options.immediate) {
+        actionCards.queryAll()
     }
 
     return {

@@ -1,13 +1,25 @@
 <script lang="ts" setup>
 import type { schemaCard } from '~~/shared/zod-schema';
 
-
 const data = defineModel<schemaCard.CardContent>('data', { required: true })
+
+const form = useTemplateRef('form')
+
+defineEmits<{
+    submit: []
+}>()
+
+defineExpose({
+    form
+})
 
 </script>
 
 <template>
-    <UForm class="space-y-5">
+    <UForm :state="data"
+           @submit="$emit('submit')"
+           ref="form"
+           class="space-y-5">
         <UFormField label="Content"
                     required
                     name="content">

@@ -5,7 +5,7 @@ import BaseLayout from '~/layouts/BaseLayout.vue';
 </script>
 
 <template>
-    <BaseLayout>
+    <BaseLayout :show-banner="false">
         <template #header>
             <LazyHeaderGlobal></LazyHeaderGlobal>
         </template>
@@ -14,15 +14,14 @@ import BaseLayout from '~/layouts/BaseLayout.vue';
             <LazyUPageHeader :title="$t('intimacy-packs.header.title')"
                              :description="$t('intimacy-packs.header.description')"
                              :links="[{
-                                label:$t('intimacy-packs.header.action'),
-                                trailingIcon:'lucide:badge-help',
-                                variant:'soft'
-                             }]"
-                             >
+                                label: $t('banner.action1-label'),
+                                to: $localePath('/how-to-use'),
+                                trailingIcon: 'lucide:message-circle-question-mark',
+                                variant: 'soft'
+                            }]">
 
             </LazyUPageHeader>
         </LazyUContainer>
-
 
     </BaseLayout>
 </template>
