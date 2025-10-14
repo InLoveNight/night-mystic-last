@@ -7,7 +7,6 @@ const actions = ref<ButtonProps[]>([
     {
         label: $t('banner.action1-label'),
         size: 'md',
-        to: path('/how-to-use')
     }
 ])
 

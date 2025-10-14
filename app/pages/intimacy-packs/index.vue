@@ -15,7 +15,6 @@ import BaseLayout from '~/layouts/BaseLayout.vue';
                              :description="$t('intimacy-packs.header.description')"
                              :links="[{
                                 label: $t('banner.action1-label'),
-                                to: $localePath('/how-to-use'),
                                 trailingIcon: 'lucide:message-circle-question-mark',
                                 variant: 'soft'
                             }]">
