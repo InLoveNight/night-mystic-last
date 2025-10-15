@@ -16,7 +16,7 @@ defineProps<{
                         :class=" game.aldult ? 'ring ring-error-500/50' : ''">
 
             <div v-if="check(game.id)"
-                 class=" absolute top-0 right-0 rounded-tr-lg rounded-bl-lg bg-warning-500 px-5 py-2 text-xs">
+                 class=" absolute top-0 right-0 rounded-tr-lg rounded-bl-lg bg-warning-500 px-5 py-2 text-xs text-inverted">
                 已导入
             </div>
 

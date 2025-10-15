@@ -1,9 +1,16 @@
 <script lang="ts" setup>
+import type { FormError } from '@nuxt/ui';
 import type { schemaCard } from '~~/shared/zod-schema';
 
 const data = defineModel<schemaCard.CardContent>('data', { required: true })
 
 const form = useTemplateRef('form')
+
+const validator = (data: schemaCard.CardContent) => {
+    const errors: FormError[] = []
+    if (data.content.length < 1) errors.push({ name: 'content', message: 'too-small' })
+    return errors
+}
 
 const emits = defineEmits<{
     submit: []
@@ -22,6 +29,7 @@ const handleSubmit = useThrottleFn(() => {
 <template>
     <UForm :state="data"
            @submit="handleSubmit"
+           :validate="validator"
            ref="form"
            class="space-y-5">
         <UFormField label="Content"

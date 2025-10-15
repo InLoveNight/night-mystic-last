@@ -1,9 +1,17 @@
 <script lang="ts" setup>
+import type { FormError } from '@nuxt/ui';
 import type { schemaCard } from '~~/shared/zod-schema';
 
 const form = useTemplateRef('form')
 
 const data = defineModel<schemaCard.Card>('data', { required: true })
+
+const validator = (data: schemaCard.Card) => {
+    const errors: FormError[] = []
+    if (data.name.length < 1) errors.push({ name: 'name', message: 'too-small' })
+
+    return errors
+}
 
 defineEmits<{
     submit: []
@@ -18,6 +26,8 @@ defineExpose({
 <template>
     <UForm class="space-y-5"
            ref="form"
+           :state="data"
+           :validate="validator"
            @submit="$emit('submit')">
         <UFormField label="Name"
                     required
