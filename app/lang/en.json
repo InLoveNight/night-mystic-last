@@ -27,7 +27,9 @@
         "delete": "Delete"
     },
     "result": {
-        "no-data": "No local data available. Please import or add new content using the button above."
+        "no-data": "No local data available. Please import or add new content using the button above.",
+        "content-no-data": "无数据，请通过上方按钮进行添加。",
+        "search-no-data": "未找到数据"
     },
     "intimacy-tool": {
         "header": {
@@ -37,7 +39,7 @@
         "items": {
             "card": {
                 "name": "Intimate Cards",
-                "description": "Two play modes, self-selected or random, with up to 50 customizable cards!"
+                "description": "Two play modes, self-selected or random, with up to 54 customizable cards!"
             },
             "truth-or-dare": {
                 "name": "Truth or Dare",
@@ -54,6 +56,14 @@
             "title": "Intimate Packs",
             "description": "Here you can import intimate packs and fully customize their content after importing locally."
         }
+    },
+    "category": {
+        "tag": "Tag",
+        "category": "Category",
+        "clear-filter": "Clear Filter",
+        "Card": "Intimate Card",
+        "TruthOrDare": "Truth Or Dare",
+        "Roulette": "Intimate Roulette"
     },
     "seo": {
         "home": {

@@ -5,7 +5,7 @@
         "home": "首页",
         "intimacy-tool": "亲密工具",
         "intimacy-packs": "亲密包",
-        "contact":"联系"
+        "contact": "联系"
     },
     "hero": {
         "headline": "你的亲密工具包",
@@ -22,13 +22,14 @@
         "save": "保存",
         "submit": "提交",
         "cancel": "取消",
-        "confirm":"确认",
+        "confirm": "确认",
         "edit": "编辑",
         "delete": "删除"
     },
     "result": {
         "no-data": "本地无数据，请通过上方按钮进行导入或新增。",
-        "content-no-data": "无数据，请通过上方按钮进行添加。"
+        "content-no-data": "无数据，请通过上方按钮进行添加。",
+        "search-no-data":"未找到数据"
     },
     "intimacy-tool": {
         "header": {
@@ -38,7 +39,7 @@
         "items": {
             "card": {
                 "name": "亲密卡",
-                "description": "两种玩法，自选与随机，最多支持 50 个卡片自定义！"
+                "description": "两种玩法，自选与随机，最多支持 54 个卡片自定义！"
             },
             "truth-or-dare": {
                 "name": "真心话大冒险",
@@ -55,6 +56,14 @@
             "title": "亲密包",
             "description": "在这里您可以导入亲密包，导入到本地后您可以完全自定义其内容。"
         }
+    },
+    "category": {
+        "tag": "标签",
+        "category": "分类",
+        "clear-filter": "清空筛选",
+        "Card": "亲密卡",
+        "TruthOrDare": "真心话大冒险",
+        "Roulette": "亲密轮盘赌"
     },
     "seo": {
         "home": {

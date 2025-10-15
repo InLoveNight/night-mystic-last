@@ -4,6 +4,7 @@ defineProps<{
     title?: string
     action?: boolean
     actionLabel?: string
+    disabled?: boolean
 }>()
 
 defineEmits<{
@@ -24,6 +25,7 @@ defineEmits<{
 
             <slot name="action">
                 <UButton v-if="action"
+                         :disabled="disabled"
                          :label="actionLabel"
                          @click="$emit('action')" />
             </slot>

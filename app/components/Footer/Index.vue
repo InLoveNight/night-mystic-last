@@ -18,7 +18,7 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-    <UFooter :ui="{ top: 'py-0 lg:py-0' }">
+    <UFooter class="mt-10" :ui="{ top: 'py-0 lg:py-0' }">
 
         <template #top>
             <LazyUSeparator>

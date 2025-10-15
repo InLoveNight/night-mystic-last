@@ -1,0 +1,1 @@
+export type GameCategory = 'Card' | 'TruthOrDare' | 'Roulette'

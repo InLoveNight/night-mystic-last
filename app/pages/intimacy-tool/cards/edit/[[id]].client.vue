@@ -132,6 +132,7 @@ const handleSubmitContent = () => {
             <LazyUiCard title="卡内容"
                         action
                         :action-label="$t('action.new')"
+                        :disabled="card.contents.length >= 54"
                         @action="handleNewContent">
                 <NoData v-if="!card.contents.length"
                         :result="$t('result.content-no-data')" />

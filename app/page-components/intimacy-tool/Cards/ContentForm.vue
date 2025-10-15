@@ -5,7 +5,7 @@ const data = defineModel<schemaCard.CardContent>('data', { required: true })
 
 const form = useTemplateRef('form')
 
-defineEmits<{
+const emits = defineEmits<{
     submit: []
 }>()
 
@@ -13,11 +13,15 @@ defineExpose({
     form
 })
 
+const handleSubmit = useThrottleFn(() => {
+    emits('submit')
+}, 500)
+
 </script>
 
 <template>
     <UForm :state="data"
-           @submit="$emit('submit')"
+           @submit="handleSubmit"
            ref="form"
            class="space-y-5">
         <UFormField label="Content"
