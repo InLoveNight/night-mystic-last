@@ -1,11 +1,15 @@
 <script lang="ts" setup>
 
+const { link = true } = defineProps<{
+    link?: boolean
+}>()
+
 </script>
 
 <template>
     <ClientOnly>
-        <ULink :to="$localePath('/')"
-               class="font-logo font-black text-3xl text-black dark:text-white"
+        <ULink :to="link ? $localePath('/') : undefined"
+               class="font-logo font-black text-black dark:text-white"
                active-class=" text-black dark:text-white">
             night mystic
         </ULink>

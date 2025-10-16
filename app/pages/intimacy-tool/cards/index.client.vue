@@ -26,18 +26,20 @@ const handlePlay = (id: string) => {
 
     <LazyUModal :open="playModal"
                 :ui="{ content: 'divide-y-0' }"
-                title="选择游戏模式"
+                :title="$t('play.select-game-mode')"
                 :close="{ onClick: () => { playModal = false } }">
         <template #body>
             <div class="flex flex-col gap-5">
                 <UButton block
                          color="info"
-                         size="xl">
-                    抽卡模式
+                         size="xl"
+                         :to="$localePath(`/play/card/${playId}/draw`)">
+                    {{ $t('play.draw-card') }}
                 </UButton>
                 <UButton block
-                         size="xl">
-                    随机模式
+                         size="xl"
+                         :to="$localePath(`/play/card/${playId}/random`)">
+                    {{ $t('play.random-draw') }}
                 </UButton>
             </div>
         </template>

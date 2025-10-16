@@ -67,7 +67,7 @@ const deleteConfirmModal = ref<boolean>(false)
 
                 <UButton size="xl"
                          class=" rounded-full shadow-lg text-center justify-center  flex-1/2"
-                         @click="$emit('play', selectedId)">
+                         @click="$emit('play', item.id!)">
                     {{ 'Play' }}
                 </UButton>
             </div>

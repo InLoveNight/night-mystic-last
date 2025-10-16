@@ -6,7 +6,8 @@ const open = defineModel('open', { default: false })
 
 defineProps<{
     title?: string
-    confirmProps?: ButtonProps
+    confirmProps?: ButtonProps,
+    headerClass?: string
 }>()
 
 defineEmits<{
@@ -20,7 +21,7 @@ defineEmits<{
     <LazyUModal :open="open"
                 :title="title"
                 :close="false"
-                :ui="{ content: 'divide-y-0' }">
+                :ui="{ content: 'divide-y-0', header: headerClass }">
         <template #body>
             <slot name="body">
                 <div>确认要删除吗？</div>

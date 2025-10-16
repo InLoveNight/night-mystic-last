@@ -2,8 +2,9 @@
 @import "@nuxt/ui";
 
 @theme {
-    --font-sans: "Roboto","Noto Sans SC","Beau Rivage", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Roboto", "Noto Sans SC", "Beau Rivage", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-logo: "Birthstone Bounce";
+    --font-result: "Abril Fatface", "Noto Sans SC",;
 }
 
 /* @font-face {

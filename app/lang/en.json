@@ -52,6 +52,11 @@
             }
         }
     },
+    "play": {
+        "select-game-mode": "Select Game Mode",
+        "draw-card": "Draw Card",
+        "random-draw": "Random Draw"
+    },
     "intimacy-packs": {
         "header": {
             "title": "Intimate Packs",

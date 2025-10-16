@@ -52,6 +52,11 @@
             }
         }
     },
+    "play": {
+        "select-game-mode": "选择游戏模式",
+        "draw-card": "抽卡模式",
+        "random-draw": "随机模式"
+    },
     "intimacy-packs": {
         "header": {
             "title": "亲密包",
