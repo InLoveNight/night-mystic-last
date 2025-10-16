@@ -24,12 +24,13 @@
         "cancel": "Cancel",
         "confirm": "Confirm",
         "edit": "Edit",
-        "delete": "Delete"
+        "delete": "Delete",
+        "feedback": "Report Issue"
     },
     "result": {
         "no-data": "No local data available. Please import or add new content using the button above.",
-        "content-no-data": "无数据，请通过上方按钮进行添加。",
-        "search-no-data": "未找到数据"
+        "content-no-data": "No data available. Please add content using the button above.",
+        "search-no-data": "No data found."
     },
     "intimacy-tool": {
         "header": {
@@ -55,15 +56,37 @@
         "header": {
             "title": "Intimate Packs",
             "description": "Here you can import intimate packs and fully customize their content after importing locally."
-        }
-    },
-    "category": {
+        },
         "tag": "Tag",
         "category": "Category",
-        "clear-filter": "Clear Filter",
+        "imported": "Imported",
+        "clear-filter": "Clear Filter"
+    },
+    "delete-confirm": {
+        "title": "Delete Local Data",
+        "message": "Are you sure you want to delete? This action cannot be undone!"
+    },
+    "category": {
         "Card": "Intimate Card",
         "TruthOrDare": "Truth Or Dare",
         "Roulette": "Intimate Roulette"
+    },
+    "step": {
+        "edit-local-btn-text": "@:action.edit {game}",
+        "to-locale-list-btn-text": "Go to Local {game} List",
+        "confirm-modal-title": "Confirm Import?",
+        "confirm-modal-message": "Are you sure you want to import the data locally?",
+        "confirm-modal-repeat-message": "You've already imported this. Do you want to re-import?",
+        "alert": "We won't overwrite previously imported data; instead, we'll create a new copy to prevent overwriting your previous changes!",
+        "step": {
+            "step-fetch": "Fetching...",
+            "step-fetch-error": "Fetch failed! Click the button to report the issue.",
+            "step-parse": "Parsing data...",
+            "step-parse-error": "Parsing failed! Click the button to report the issue.",
+            "step-import": "Writing to local data...",
+            "step-import-error": "Write failed! Click the button to report the issue.",
+            "step-import-success": "Import successful! Enjoy ~"
+        }
     },
     "seo": {
         "home": {

@@ -23,8 +23,11 @@ const deleteConfirmModal = ref<boolean>(false)
 <template>
     <LazyUiConfirmModal v-model:open="deleteConfirmModal"
                         @confirm="$emit('delete', selectedId); deleteConfirmModal = false"
-                        title="删除数据"
+                        :title="$t('delete-confirm.title')"
                         :confirm-props="{ color: 'error' }">
+        <template #body>
+            {{ $t('delete-confirm.message') }}
+        </template>
     </LazyUiConfirmModal>
 
 

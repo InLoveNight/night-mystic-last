@@ -7,12 +7,17 @@ export default () => {
     const ids = ref<string[]>([])
 
     const queryIds = async () => {
-        const { result: cardIds } = await execute(() => dexieDb.cards.toCollection().primaryKeys())
-        cardIds?.map(item => ids.value.push(item!))
+        if (import.meta.client) {
+            const { result: cardIds } = await execute(() => dexieDb.cards.toCollection().primaryKeys())
+
+            cardIds?.map(item => {
+                if (item && !ids.value.includes(item)) ids.value.push(item)
+            })
+        }
     }
 
     const check = (id?: string) => {
-        queryIds().then()
+        if (!id) return false
         return ids.value.includes(id as string)
     }
 
@@ -20,7 +25,9 @@ export default () => {
         await queryIds()
     }
 
-    refresh()
+    onMounted(() => {
+        refresh()
+    })
 
 
     return {

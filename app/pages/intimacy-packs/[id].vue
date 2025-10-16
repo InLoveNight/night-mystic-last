@@ -19,6 +19,7 @@ if (error.value) throw error.value
 // import
 const importConfirmOpen = ref<boolean>(false)
 const importModalOpen = ref<boolean>(false)
+const thisGameId = ref<string>('')
 
 const step = ref<ImportStep>({
     state: 'loading',
@@ -32,7 +33,14 @@ const handleConfirm = async () => {
 }
 
 const importing = async () => {
-    const clonedData = { ...game.value?.data, id: checkedId.value ? generateUuid() : game.value?.id } as schemaCard.Card
+    // 处理 ID
+    thisGameId.value = checkedId.value ? generateUuid() : game.value?.id as string
+    const clonedData = {
+        ...game.value?.data,
+        id: thisGameId.value
+    } as schemaCard.Card
+
+    // 开始流程
     await sleep(1000)
     switch (game.value?.category) {
         case 'Card':
@@ -76,13 +84,25 @@ const handleImportModalClose = async () => {
 
     <ImportModal v-model:open="importModalOpen"
                  :step="step"
+                 :this-game-id="thisGameId"
+                 :edit-locale-btn-text="$t('step.edit-local-btn-text', { game: $t(`category.${game?.category}`) })"
+                 :to-locale-list-btn-text="$t('step.to-locale-list-btn-text', { game: $t(`category.${game?.category}`) })"
                  @import-modal-close="handleImportModalClose" />
 
-    <LazyUiConfirmModal title="确认导入？"
+    <LazyUiConfirmModal :title="$t('step.confirm-modal-title')"
                         v-model:open="importConfirmOpen"
                         @confirm="handleConfirm">
         <template #body>
-            {{ checkedId ? '你已经导入过了，还要重新导入吗？' : '确认要导入吗？' }}
+            {{ $t(checkedId ? 'step.confirm-modal-repeat-message' : 'step.confirm-modal-message') }}
+
+            <UAlert v-if="checkedId"
+                    :title="$t('step.alert')"
+                    :ui="{ title: 'text-sm font-normal' }"
+                    icon="ri:alarm-warning-fill"
+                    class="mt-5"
+                    variant="soft"
+                    color="warning" />
+
         </template>
     </LazyUiConfirmModal>
 

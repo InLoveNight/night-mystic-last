@@ -7,8 +7,8 @@ defineEmits<{
 </script>
 
 <template>
-    <div class="flex items-start">
-        <div class=" text-nowrap mt-1 font-semibold">{{ $t('category.category') }}：</div>
+    <div class="flex items-start"> 
+        <div class=" text-nowrap mt-1 font-semibold">{{ $t('intimacy-packs.category') }}：</div>
         <div>
             <UButton v-for="category in ['Card'] as GameCategory[]"
                      variant="link"

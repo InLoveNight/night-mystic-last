@@ -24,12 +24,13 @@
         "cancel": "取消",
         "confirm": "确认",
         "edit": "编辑",
-        "delete": "删除"
+        "delete": "删除",
+        "feedback": "报告问题"
     },
     "result": {
         "no-data": "本地无数据，请通过上方按钮进行导入或新增。",
         "content-no-data": "无数据，请通过上方按钮进行添加。",
-        "search-no-data":"未找到数据"
+        "search-no-data": "未找到数据"
     },
     "intimacy-tool": {
         "header": {
@@ -55,15 +56,37 @@
         "header": {
             "title": "亲密包",
             "description": "在这里您可以导入亲密包，导入到本地后您可以完全自定义其内容。"
-        }
-    },
-    "category": {
+        },
         "tag": "标签",
         "category": "分类",
-        "clear-filter": "清空筛选",
+        "imported": "已导入",
+        "clear-filter": "清空筛选"
+    },
+    "delete-confirm": {
+        "title": "删除本地数据",
+        "message": "确认要删除吗？删除后不可恢复！"
+    },
+    "category": {
         "Card": "亲密卡",
         "TruthOrDare": "真心话大冒险",
         "Roulette": "亲密轮盘赌"
+    },
+    "step": {
+        "edit-local-btn-text": "@:action.edit{game}",
+        "to-locale-list-btn-text": "跳转至本地{game}列表",
+        "confirm-modal-title": "确认导入？",
+        "confirm-modal-message": "确认要导入数据到本地吗？",
+        "confirm-modal-repeat-message": "你已经导入过了，还要重新导入吗？",
+        "alert": "我们不会覆盖之前导入的数据，而是会创建一个新的副本。以防止覆盖掉你之前的修改！",
+        "step": {
+            "step-fetch": "正在请求...",
+            "step-fetch-error": "请求失败！点击按钮反馈问题。",
+            "step-parse": "正在解析数据...",
+            "step-parse-error": "解析失败！点击按钮反馈问题。",
+            "step-import": "正在写入本地数据...",
+            "step-import-error": "写入失败！点击按钮反馈问题。",
+            "step-import-success": "导入成功！尽情享受吧 ~"
+        }
     },
     "seo": {
         "home": {

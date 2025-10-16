@@ -81,7 +81,7 @@ watch(() => locale, () => {
                              size="xs"
                              variant="outline"
                              color="error">
-                        {{ $t('category.clear-filter') }}
+                        {{ $t('intimacy-packs.clear-filter') }}
                     </UButton>
                 </div>
             </LazyUiCard>

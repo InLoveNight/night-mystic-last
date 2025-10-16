@@ -12,7 +12,7 @@ defineEmits<{
 
 <template>
     <div class="flex items-start">
-        <div class="text-nowrap mt-1 font-semibold">{{ $t('category.tag') }}：</div>
+        <div class="text-nowrap mt-1 font-semibold">{{ $t('intimacy-packs.tag') }}：</div>
         <div>
             <UButton v-for="tag in tags"
                      variant="link"

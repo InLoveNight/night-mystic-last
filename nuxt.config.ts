@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         preference: 'system'
     },
     i18n: {
-        defaultLocale: 'zh-CN',
+        defaultLocale: 'en',
         restructureDir: 'app/lang',
         langDir: './',
         detectBrowserLanguage: {
