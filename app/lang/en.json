@@ -55,7 +55,43 @@
     "play": {
         "select-game-mode": "Select Game Mode",
         "draw-card": "Draw Card",
-        "random-draw": "Random Draw"
+        "random-draw": "Random Draw",
+        "timer": {
+            "timer": "Timer",
+            "start": "Start",
+            "pause": "Pause",
+            "resume": "Resume",
+            "reset": "Reset"
+        },
+        "leave": {
+            "title": "Exit?",
+            "description": "Are you sure you want to exit? Exiting will discard the current game progress."
+        },
+        "random-button": "Draw",
+        "shuffle": {
+            "title": "Shuffle",
+            "description": "Are you sure you want to shuffle? Shuffling will reset the game and discard the current progress."
+        },
+        "selected": {
+            "tag": "Selected",
+            "title": "Already Selected",
+            "description": "This has already been selected. Do you want to select again?"
+        },
+        "setting": {
+            "title": "Game Settings",
+            "bg": {
+                "title": "Background Animation",
+                "description": "Enable background animation"
+            },
+            "ringtone": {
+                "title": "Play Notification Sound",
+                "description": "Play a sound when the countdown ends"
+            },
+            "count": {
+                "title": "Show Counter",
+                "description": "Display all counters"
+            }
+        }
     },
     "intimacy-packs": {
         "header": {

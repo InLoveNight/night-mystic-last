@@ -127,7 +127,8 @@ const handleImportModalClose = async () => {
 
                 <template #title>
                     {{ game.data.name }}
-                    <UBadge color="error"
+                    <UBadge v-if="game.aldult"
+                            color="error"
                             size="xl"
                             class="rounded-full">18+</UBadge>
                 </template>

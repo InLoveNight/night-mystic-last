@@ -1,11 +1,18 @@
 <script lang="ts" setup>
 import DisableRefreshLayout from '~/layouts/DisableRefreshLayout.vue';
+import LeaveConfirm from '~/page-components/intimacy-tool/LeaveConfirm.vue';
 import { useLocaleCards } from '~/hooks/locale-data/cards';
+import usePlaySetting from '~/hooks/usePlaySetting';
+import ResultGameModal from '~/page-components/intimacy-tool/ResultGameModal.vue';
 import type { schemaCard } from '~~/shared/zod-schema';
 import { draw } from 'radash';
 
 const { card, actionCards } = useLocaleCards()
 
+// 背景动画
+const dh = useTemplateRef('dh')
+
+// 加载数据
 onMounted(() => {
     actionCards.queryById(useRoute().params.id as string)
 })
@@ -31,53 +38,35 @@ const handleRandom = () => {
     const res = randomCard()
     randomCardModalOpen.value = true
     selectedCard.value = res
+    dh.value?.pause()
 }
 
 const settingOpen = ref<boolean>(false)
 
+// play setting
+const { playSetting } = usePlaySetting()
+
+
+
 </script>
 
 <template>
+    <LeaveConfirm @before-leave-action="() => selected = []" />
 
-    <LazyHeaderPlayMenu v-model:open="settingOpen">
+    <LazyHeaderPlayMenu v-model:open="settingOpen" />
 
-    </LazyHeaderPlayMenu>
-
-    <LazyUModal :open="randomCardModalOpen"
-                :close="false"
-                :title="selectedCard?.title"
-                :ui="{ content: 'divide-y-0' }">
-        <template #content>
-            <div class="p-5 space-y-5">
-
-                <h2 v-if="selectedCard?.title"
-                    class=" text-muted font-semibold text-center text-md line-clamp-1">
-                    {{ selectedCard.title }}
-                </h2>
-
-                <div class="font-result p-5 rounded-lg bg-elevated/50 font-black text-lg">
-                    {{ selectedCard?.content }}
-                </div>
-
-                <div class="flex justify-end">
-                    <UButton size="xl"
-                             @click="randomCardModalOpen = false">
-                        OK
-                    </UButton>
-                </div>
-            </div>
-        </template>
-    </LazyUModal>
-
-
+    <ResultGameModal v-model:open="randomCardModalOpen"
+                     :result="selectedCard"
+                     @ok="dh?.play()" />
 
     <DisableRefreshLayout>
-        <HeaderWithBack>
+        <HeaderWithBack :default-back-action="false"
+                        @back="() => $router.push($localePath('/intimacy-tool/cards'))">
             <template #right>
                 <div class="flex gap-5">
                     <UIcon name="lucide:settings"
                            @click="settingOpen = true"
-                           class="size-5" />
+                           class="size-5 cursor-pointer" />
                 </div>
             </template>
         </HeaderWithBack>
@@ -85,19 +74,22 @@ const settingOpen = ref<boolean>(false)
         <Layout7XL class="px-2 mt-5 ">
 
             <div
-                 class=" ring-2 rounded-lg w-xs h-[500px] text-center fixed left-1/2 -translate-x-1/2 top-7/12 -translate-y-7/12">
-                <div class="font-logo font-bold text-5xl mt-10">
+                 class=" ring-2 rounded-lg w-xs h-[500px]  md:w-md md:h-[600px] lg:w-lg lg:h-[800px] text-center fixed left-1/2 -translate-x-1/2 top-7/12 -translate-y-7/12 bg-default/5 backdrop-blur-xs">
+                <div class="font-logo font-bold text-5xl mt-15 lg:text-7xl select-none">
                     Night Mystic
                 </div>
 
-                <p class="mt-20 font-logo text-3xl font-bold">{{ selected.length }} / {{ card.contents.length }}</p>
+                <p v-if="playSetting.count"
+                   class="mt-20 font-logo text-3xl font-bold lg:text-6xl">
+                    {{ selected.length }} / {{ card.contents.length }}
+                </p>
 
                 <div @click="handleRandom"
-                     class=" w-[100px] h-[100px] rounded-full bg-primary shadow-lg flex items-center justify-center absolute left-1/2 -translate-x-1/2 bottom-10 cursor-pointer">
+                     class=" w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-full bg-primary shadow-lg flex items-center justify-center absolute left-1/2 -translate-x-1/2 bottom-10 cursor-pointer">
                     <!-- <p class=" text-inverted font-black text-xl tracking-widest">抽取</p> -->
                     <UButton size="xl"
-                             class=" font-black tracking-widest">
-                        抽取
+                             class=" font-black tracking-widest text-xl lg:text-2xl">
+                        {{ $t('play.random-button') }}
                     </UButton>
                 </div>
             </div>
@@ -105,4 +97,6 @@ const settingOpen = ref<boolean>(false)
         </Layout7XL>
 
     </DisableRefreshLayout>
+
+    <LazyParticlesConfetti ref="dh" />
 </template>

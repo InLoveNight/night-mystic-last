@@ -68,7 +68,7 @@ watch(() => locale, () => {
 
             </LazyUPageHeader>
 
-            <LazyUiCard class="mt-5  sticky top-20 z-10">
+            <LazyUiCard class="mt-5 ">
                 <Category @click="handleCategory" />
                 <Tag :tags="tags"
                      @click="handleTag"

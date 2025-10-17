@@ -55,7 +55,43 @@
     "play": {
         "select-game-mode": "选择游戏模式",
         "draw-card": "抽卡模式",
-        "random-draw": "随机模式"
+        "random-draw": "随机模式",
+        "timer": {
+            "timer": "计时器",
+            "start": "开始",
+            "pause": "暂停",
+            "resume": "继续",
+            "reset": "重置"
+        },
+        "leave": {
+            "title": "退出？",
+            "description": "确认退出吗？退出后会丢失本次游戏记录。"
+        },
+        "random-button": "抽取",
+        "shuffle": {
+            "title": "洗牌",
+            "description": "确认洗牌吗？洗牌会重置游戏。丢失当前游戏记录。"
+        },
+        "selected": {
+            "tag": "已选",
+            "title": "已经选择过了",
+            "description": "已经选择过了，还要重新选择吗？"
+        },
+        "setting":{
+            "title":"游戏设置",
+            "bg":{
+                "title":"背景动画",
+                "description":"播放背景动画"
+            },
+            "ringtone":{
+                "title":"播放提示音",
+                "description":"当倒计时结束后播放提示音"
+            },
+            "count":{
+                "title":"显示计数",
+                "description":"显示所有计数"
+            }
+        }
     },
     "intimacy-packs": {
         "header": {

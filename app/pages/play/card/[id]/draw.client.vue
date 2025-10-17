@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import DisableRefreshLayout from '~/layouts/DisableRefreshLayout.vue';
+import LeaveConfirm from '~/page-components/intimacy-tool/LeaveConfirm.vue';
+import ResultGameModal from '~/page-components/intimacy-tool/ResultGameModal.vue';
 import { useLocaleCards } from '~/hooks/locale-data/cards';
+import usePlaySetting from '~/hooks/usePlaySetting';
 import type { schemaCard } from '~~/shared/zod-schema';
 import { shuffle } from 'radash';
 
@@ -9,6 +12,10 @@ const shuffledData = useLocalStorage<schemaCard.CardContent[]>('play-card-shuffl
 
 const { card, actionCards } = useLocaleCards({ immediate: false })
 
+// 动画
+const dh = useTemplateRef('dh')
+
+// 请求数据
 onMounted(async () => {
     await actionCards.queryById(useRoute().params.id as string)
     if (!shuffledData.value.length) {   // 如果 localeStorage 有数据，则不洗牌。
@@ -36,12 +43,13 @@ const again = async () => {
     });
 }
 
-const selectedCard = ref<schemaCard.CardContent | null>(null)
+const selectedCard = ref<schemaCard.CardContent>()
 const confirmModalOpen = ref<boolean>(false)
 const drawCardModalOpen = ref<boolean>(false)
 
 const handleCard = async (key: number) => {
     selectedCard.value = shuffledData.value[key]!
+    dh.value?.pause()
     if (checkSelected(key)) {
         confirmModalOpen.value = true
         const res = await again()
@@ -63,94 +71,54 @@ const confirmShuffle = () => {
     shuffleConfirmOpen.value = false
 }
 
+// setting
+const settingOpen = ref<boolean>()
 
-// 退出逻辑
-const leaveConfirm = ref<boolean>(false)
-
-onBeforeRouteLeave(async () => {
-    leaveConfirm.value = true
-
-    return again().then(r => {
-        if (r) {
-            shuffledData.value = []
-            selected.value = []
-        }
-        return r
-    })
-})
-
+// play setting
+const { playSetting } = usePlaySetting()
 
 </script>
 
 <template>
+    <LazyHeaderPlayMenu v-model:open="settingOpen" />
 
-    <LazyUiConfirmModal v-model:open="leaveConfirm"
-                        title="Leave"
-                        header-class=" justify-center"
-                        @confirm="waitConfirm?.(true)"
-                        @cancel="waitConfirm?.(false)">
-        <template #body>
-            确认退出吗？退出后会丢失本次游戏记录。
-        </template>
-    </LazyUiConfirmModal>
+    <LeaveConfirm @before-leave-action="() => { shuffledData = [], selected = [] }" />
 
     <LazyUiConfirmModal v-model:open="shuffleConfirmOpen"
                         header-class=" justify-center"
-                        title="洗牌"
+                        :title="$t('play.shuffle.title')"
                         @confirm="confirmShuffle">
         <template #body>
-            确认洗牌吗？洗牌会重置游戏。丢失当前游戏记录。
+            {{ $t('play.shuffle.description') }}
         </template>
     </LazyUiConfirmModal>
 
     <LazyUiConfirmModal v-model:open="confirmModalOpen"
                         header-class=" justify-center"
-                        title="已经选择过了"
+                        :title="$t('play.selected.title')"
                         @confirm="waitConfirm?.(true)"
                         @cancel="waitConfirm?.(false)">
         <template #body>
-            已经选择过了，还要重新选择吗？
+            {{ $t('play.selected.description') }}
         </template>
     </LazyUiConfirmModal>
 
-    <LazyUModal :open="drawCardModalOpen"
-                :close="false"
-                :title="selectedCard?.title"
-                :ui="{ content: 'divide-y-0' }">
-        <template #content>
-            <div class="p-5 space-y-5">
-
-                <h2 v-if="selectedCard?.title"
-                    class=" text-muted font-semibold text-center text-md line-clamp-1">
-                    {{ selectedCard.title }}
-                </h2>
-
-                <div class="font-result p-5 rounded-lg bg-elevated/50 font-black text-lg">
-                    {{ selectedCard?.content }}
-                </div>
-
-                <div class="flex justify-end">
-                    <UButton size="xl"
-                             @click="drawCardModalOpen = false">
-                        OK
-                    </UButton>
-                </div>
-            </div>
-        </template>
-    </LazyUModal>
-
-
+    <ResultGameModal v-model:open="drawCardModalOpen"
+                     :result="selectedCard"
+                     @ok="dh?.play()" />
 
     <DisableRefreshLayout>
         <Layout7XL bottom-padding>
-            <LazyHeaderWithBack>
+            <LazyHeaderWithBack :default-back-action="false"
+                                @back="() => $router.push($localePath('/intimacy-tool/cards'))">
                 <template #right>
                     <div class="flex gap-5">
                         <UIcon name="lucide:dices"
-                               class="size-5"
+                               class="size-5 cursor-pointer"
                                @click="shuffleConfirmOpen = true" />
                         <UIcon name="lucide:settings"
-                               class="size-5" />
+                               class="size-5 cursor-pointer"
+                               @click="settingOpen = true" />
                     </div>
                 </template>
             </LazyHeaderWithBack>
@@ -158,13 +126,15 @@ onBeforeRouteLeave(async () => {
             <div class=" px-2 mt-5 grid gap-5 grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
                 <template v-for="(_, key) in card.contents"
                           :key="key">
-                    <div :class="checkSelected(key) ? ' bg-accented ring ring-warning-500' : 'bg-elevated'"
-                         class="flex items-center justify-center relative h-40 md:h-56 lg:h-64 xl:h-72 shadow-lg rounded-lg text-center p-5"
+                    <div :class="checkSelected(key) ? ' bg-accented/80 ring ring-warning-500' : 'bg-elevated/80'"
+                         class="flex items-center justify-center relative h-40 md:h-56 lg:h-64 xl:h-72 shadow-lg rounded-lg text-center p-5 backdrop-blur-xs"
                          @click="handleCard(key)">
 
                         <div>
-                            <div class="font-logo text-lg font-bold text-toned/50">{{ key + 1 }}</div>
-                            <div class="font-logo font-bold md:text-xl lg:text-2xl mt-2"
+                            <div v-show="playSetting.count"
+                                 class="font-logo text-2xl font-bold text-default">{{ key + 1 }}</div>
+
+                            <div class="font-logo font-bold md:text-xl lg:text-2xl mt-2 select-none"
                                  :class="checkSelected(key) ? ' text-warning-500' : ''">
                                 Night Mystic
                             </div>
@@ -172,7 +142,7 @@ onBeforeRouteLeave(async () => {
 
                         <p v-if="checkSelected(key)"
                            class=" absolute top-0 right-0 text-xs font-black p-2 rounded-tr-lg rounded-bl-lg bg-warning-500 text-inverted">
-                            Selected
+                            {{ $t('play.selected.tag') }}
                         </p>
                     </div>
                 </template>
@@ -180,4 +150,6 @@ onBeforeRouteLeave(async () => {
         </Layout7XL>
 
     </DisableRefreshLayout>
+
+    <LazyParticlesConfetti ref="dh" />
 </template>
