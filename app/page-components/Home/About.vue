@@ -14,7 +14,7 @@
                            class="size-8 text-red-500"></UIcon>
                     <h3 class=" font-black text-lg">隐私优先</h3>
                     <p class=" font-semibold text-md">你的秘密，设备独享</p>
-                    <p class=" text-[14px] text-toned">所有数据只存储在你手机或电脑本地，不上传云端，绝对私密。无论是18+的火辣任务还是浪漫对话，你的亲密时刻没人能偷看。</p>
+                    <p class=" text-[14px] text-toned">所有数据只存储在你手机或电脑本地，不上传云端，绝对私密。无需注册与登录，你的亲密时刻没人能偷看。</p>
                 </div>
 
                 <div class="space-y-2">
@@ -30,7 +30,7 @@
                            class="size-8 text-primary-500"></UIcon>
                     <h3 class=" font-black text-lg">手机优先</h3>
                     <p class=" font-semibold text-md">随时随地，点燃一夜</p>
-                    <p class=" text-[14px] text-toned">专为手机优化，界面简洁，随时在卧室、约会或旅行中玩。随机抽一张“激情”卡或挑个“心动”任务，手机屏幕就是你们的浪漫舞台。</p>
+                    <p class=" text-[14px] text-toned">专为手机优化，界面简洁，随时在卧室、约会或旅行中玩。手机屏幕就是你们的浪漫舞台。</p>
                 </div>
             </div>
         </template>

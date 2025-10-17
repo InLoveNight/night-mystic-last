@@ -28,8 +28,8 @@
         "feedback": "报告问题"
     },
     "result": {
-        "no-data": "本地无数据，请通过上方按钮进行导入或新增。",
-        "content-no-data": "无数据，请通过上方按钮进行添加。",
+        "no-data": "本地无数据，请选择导入或新增。",
+        "content-no-data": "无数据，请通过点击按钮进行添加。",
         "search-no-data": "未找到数据"
     },
     "intimacy-tool": {
@@ -77,19 +77,19 @@
             "title": "已经选择过了",
             "description": "已经选择过了，还要重新选择吗？"
         },
-        "setting":{
-            "title":"游戏设置",
-            "bg":{
-                "title":"背景动画",
-                "description":"播放背景动画"
+        "setting": {
+            "title": "游戏设置",
+            "bg": {
+                "title": "背景动画",
+                "description": "播放背景动画"
             },
-            "ringtone":{
-                "title":"播放提示音",
-                "description":"当倒计时结束后播放提示音"
+            "ringtone": {
+                "title": "播放提示音",
+                "description": "当倒计时结束后播放提示音"
             },
-            "count":{
-                "title":"显示计数",
-                "description":"显示所有计数"
+            "count": {
+                "title": "显示计数",
+                "description": "显示所有计数"
             }
         }
     },

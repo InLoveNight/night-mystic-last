@@ -28,8 +28,8 @@
         "feedback": "Report Issue"
     },
     "result": {
-        "no-data": "No local data available. Please import or add new content using the button above.",
-        "content-no-data": "No data available. Please add content using the button above.",
+        "no-data": "No local data available. Please import or add new content.",
+        "content-no-data": "No data available. Please add content by clicking the button.",
         "search-no-data": "No data found."
     },
     "intimacy-tool": {

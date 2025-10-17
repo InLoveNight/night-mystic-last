@@ -50,17 +50,19 @@ const handlePlay = (id: string) => {
                             @back="$router.push($localePath('/intimacy-tool'))">
             <template #right>
                 <div class="flex gap-5 items-center">
-                    <LazyUIcon name="lucide:message-circle-question-mark"
-                               class="size-5 cursor-pointer"></LazyUIcon>
                     <Action @new="$router.push($localePath('/intimacy-tool/cards/edit'))"
-                            @import="$router.push($localePath('/intimacy-packs'))" />
+                            @import="$router.push($localePath('/intimacy-packs?category=Card'))" />
                 </div>
             </template>
         </LazyHeaderWithBack>
 
         <Layout7XL class="mt-5">
             <NoData v-if="!cards.length"
-                    :result="$t('result.no-data')" />
+                    :result="$t('result.no-data')"
+                    show-import
+                    show-new
+                    :new-to="$localePath('/intimacy-tool/cards/edit')"
+                    :import-to="$localePath('/intimacy-packs?category=Card')" />
             <GameItems v-else
                        type="cards"
                        :items="cards"

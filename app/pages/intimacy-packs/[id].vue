@@ -2,7 +2,6 @@
 import BaseLayout from '~/layouts/BaseLayout.vue';
 import Card from "~/page-components/intimacy-packs/Contents/Card.vue"
 import useCheckIdRepeat from '~/hooks/useCheckIdRepeat';
-import SubScription from '~/page-components/Home/SubScription.vue';
 import ImportModal from '~/page-components/intimacy-packs/ImportModal.vue';
 import { schemaCard } from '~~/shared/zod-schema';
 import { sleep } from 'radash';
@@ -152,12 +151,10 @@ const handleImportModalClose = async () => {
                 </div>
             </LazyUPageHeader>
 
-            <div class="mt-5 mb-10">
+            <div class="mt-5">
                 <Card :data="game as BackEndCard" />
             </div>
         </LazyUContainer>
 
-
-        <SubScription class="-mb-3.5" />
     </BaseLayout>
 </template>

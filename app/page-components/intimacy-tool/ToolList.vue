@@ -12,29 +12,6 @@ defineProps<{
     }[]
 }>()
 
-// const list = ref([
-//     {
-//         title: $t('intimacy-tool.items.card.name'),
-//         description: $t('intimacy-tool.items.card.description'),
-//         color: 'bg-emerald-500/40',
-//         icon: 'streamline-stickies-color:validation-1-duo',
-//         to: '/intimacy-tool/cards'
-//     },
-//     {
-//         title: $t('intimacy-tool.items.truth-or-dare.name'),
-//         description: $t('intimacy-tool.items.truth-or-dare.description'),
-//         color: 'bg-pink-500/40',
-//         icon: 'streamline-stickies-color:candy-cane',
-//         comingSoon: true
-//     },
-//     {
-//         title: $t('intimacy-tool.items.roulette.name'),
-//         description: $t('intimacy-tool.items.roulette.description'),
-//         color: 'bg-yellow-500/40',
-//         icon: 'streamline-stickies-color:wand',
-//         comingSoon: true
-//     },
-// ])
 
 </script>
 

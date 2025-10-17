@@ -32,7 +32,7 @@ const submitCard = async () => {
         console.log('卡片内容为空！');
         return
     }
-
+    
     if (id.value) {
         const res = await actionCards.updateById(id.value)
         if (res) useRouter().push(useLocalePath()('/intimacy-tool/cards'))
@@ -94,8 +94,8 @@ const handleSubmitContent = () => {
 <template>
 
     <ToolContentModal v-model:open="openModal"
-               title="卡片内容"
-               @submit="handleSubmitContent">
+                      title="卡片内容"
+                      @submit="handleSubmitContent">
         <CardContentForm v-model:data="cardContent"
                          @submit="submitContent"
                          ref="contentForm" />
@@ -110,7 +110,8 @@ const handleSubmitContent = () => {
 
     <DisableRefreshLayout>
 
-        <LazyHeaderWithBack>
+        <LazyHeaderWithBack :default-back-action="false"
+                            @back="$router.push($localePath('/intimacy-tool/cards'))">
             <template #right>
                 <UButton class="rounded-full px-5"
                          @click="handleCardSave">
@@ -135,7 +136,9 @@ const handleSubmitContent = () => {
                         :disabled="card.contents.length >= 54"
                         @action="handleNewContent">
                 <NoData v-if="!card.contents.length"
-                        :result="$t('result.content-no-data')" />
+                        :result="$t('result.content-no-data')"
+                        show-new
+                        @new="handleNewContent" />
 
                 <div v-else
                      class="grid grid-cols-1 md:grid-cols-2 gap-5">

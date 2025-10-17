@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
+import SubScription from '~/page-components/Home/SubScription.vue';
 
 const items: NavigationMenuItem[] = [
     {
@@ -18,12 +19,10 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-    <UFooter :ui="{ top: 'py-0 lg:py-0' }">
+    <UFooter :ui="{ top: 'py-0 lg:py-0 mt-10' }">
 
         <template #top>
-            <LazyUSeparator>
-                <UiLogo class="text-lg" />
-            </LazyUSeparator>
+            <SubScription />
         </template>
 
         <template #left>
@@ -34,24 +33,11 @@ const items: NavigationMenuItem[] = [
             </p>
         </template>
 
-        <UNavigationMenu :items="items"
-                         variant="link" />
+
 
         <template #right>
-            <UButton icon="lucide:youtube"
-                     color="neutral"
-                     variant="ghost"
-                     to="https://go.nuxt.com/discord"
-                     target="_blank"
-                     size="xl"
-                     aria-label="Discord" />
-            <UButton icon="i-simple-icons-x"
-                     color="neutral"
-                     size="xs"
-                     variant="ghost"
-                     to="https://go.nuxt.com/x"
-                     target="_blank"
-                     aria-label="X" />
+            <UNavigationMenu :items="items"
+                             variant="link" />
         </template>
     </UFooter>
 </template>

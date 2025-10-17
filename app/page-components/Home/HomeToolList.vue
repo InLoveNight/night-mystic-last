@@ -24,8 +24,8 @@ const list = ref([
         comingSoon: true
     },
     {
-        title: '更多工具开发中...',
-        description: '您可以通过联系我们，然后一起探讨 ~',
+        title: '查看所有亲密工具',
+        description: '在这里您可以查看并免费使用我们的所有亲密工具',
         color: 'bg-purple-500/40',
         icon: 'streamline-stickies-color:easter-egg'
     },
@@ -42,7 +42,10 @@ const list = ref([
                   :ui="{ title: 'text-xl sm:text-2xl lg:text-3xl', container: 'lg:grid-cols-3' }"
                   :links="[
                     {
-                        label: '所有工具'
+                        label: '联系我们'
+                    },
+                    {
+                        label: '立即订阅'
                     }
                 ]">
         <ToolList :list="list"

@@ -22,7 +22,7 @@ const handleBack = () => {
 </script>
 
 <template>
-    <LazyLayout7XL class="sticky top-2 z-50">
+    <LazyLayout7XL class="sticky top-2 z-20">
         <div class="flex justify-between items-center relative rounded-lg p-5 mt-2 bg-elevated/75 backdrop-blur">
             <div>
                 <slot name="left">
