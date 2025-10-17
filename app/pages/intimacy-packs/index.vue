@@ -54,7 +54,11 @@ watch(() => locale, () => {
 <template>
     <BaseLayout :show-banner="false">
         <template #header>
-            <LazyHeaderGlobal></LazyHeaderGlobal>
+            <LazyHeaderGlobal>
+                <template #right-action>
+                    <SupportMe />
+                </template>
+            </LazyHeaderGlobal>
         </template>
 
         <LazyUContainer>

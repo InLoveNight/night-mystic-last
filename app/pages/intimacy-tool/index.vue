@@ -33,7 +33,11 @@ const list = ref([
 <template>
     <BaseLayout>
         <template #header>
-            <LazyHeaderGlobal />
+            <LazyHeaderGlobal>
+                <template #right-action>
+                    <SupportMe />
+                </template>
+            </LazyHeaderGlobal>
         </template>
 
         <UContainer>
@@ -41,7 +45,8 @@ const list = ref([
                              :description="$t('intimacy-tool.header.description')">
             </LazyUPageHeader>
 
-            <ToolList :list="list" class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 mt-10" />
+            <ToolList :list="list"
+                      class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 mt-10" />
         </UContainer>
     </BaseLayout>
 

@@ -1,6 +1,10 @@
 {
     "title": "Night Mystic",
     "coming-soon": "Coming Soon",
+    "support-me": {
+        "name": "Support Me",
+        "content": "Enjoy my work? Support Me!"
+    },
     "menu": {
         "home": "Home",
         "intimacy-tool": "Intimacy Tool",

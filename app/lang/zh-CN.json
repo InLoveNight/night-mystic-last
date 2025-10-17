@@ -1,6 +1,10 @@
 {
     "title": "夜私",
     "coming-soon": "即将发布",
+    "support-me": {
+        "name": "支持一下",
+        "content": "喜欢的话，就支持一下吧！"
+    },
     "menu": {
         "home": "首页",
         "intimacy-tool": "亲密工具",

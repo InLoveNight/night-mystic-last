@@ -16,7 +16,11 @@ useSeoMeta({
 <template>
     <BaseLayout>
         <template #header>
-            <HeaderGlobal></HeaderGlobal>
+            <HeaderGlobal>
+                <template #right-action>
+                    <LazySupportMe />
+                </template>
+            </HeaderGlobal>
         </template>
 
         <Hero />
