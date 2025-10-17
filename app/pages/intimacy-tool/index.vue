@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import BaseLayout from '~/layouts/BaseLayout.vue';
+import ToolList from '~/page-components/intimacy-tool/ToolList.vue';
+import SubScription from '~/page-components/Home/SubScription.vue';
 
 const list = ref([
     {
@@ -39,31 +41,8 @@ const list = ref([
                              :description="$t('intimacy-tool.header.description')">
             </LazyUPageHeader>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 my-10">
-
-                <template v-for="item in list">
-                    <div class="rounded-lg p-5 relative"
-                         :class="item.comingSoon ? `${item.color} grayscale cursor-not-allowed` : `${item.color} cursor-pointer`"
-                         @click="item.to ? $router.push($localePath(item.to)) : ''">
-
-                        <div class="flex gap-2 items-center">
-                            <h3 class="text-xl font-black my-2">{{ item.title }}</h3>
-                            <UBadge v-if="item.comingSoon"
-                                    size="sm"
-                                    color="neutral"
-                                    class="h-full">
-                                {{ $t('coming-soon') }}
-                            </UBadge>
-                        </div>
-
-                        <p class="text-[14px]/5 max-w-3/5 xl:max-w-4/5">{{ item.description }}</p>
-
-                        <UIcon :name="item.icon"
-                               class="absolute right-5 -top-5 size-20"></UIcon>
-                    </div>
-                </template>
-
-            </div>
+            <ToolList :list="list" class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 mt-10" />
         </UContainer>
     </BaseLayout>
+
 </template>

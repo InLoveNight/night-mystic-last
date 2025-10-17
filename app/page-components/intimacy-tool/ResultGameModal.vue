@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+/** 游戏结果弹窗 */
 import type { schemaCard } from '~~/shared/zod-schema';
 
 const open = defineModel('open', { default: false })

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+/** 新增游戏内容弹窗 */
 
 const open = defineModel('open', { default: false })
 

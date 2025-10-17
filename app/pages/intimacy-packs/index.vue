@@ -86,7 +86,7 @@ watch(() => locale, () => {
                 </div>
             </LazyUiCard>
 
-            <div class="mt-5">
+            <div class="mt-5 my-10">
 
                 <NoData v-if="!games.length"
                         :result="$t('result.search-no-data')" />

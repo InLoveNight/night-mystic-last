@@ -3,7 +3,7 @@ import DisableRefreshLayout from '~/layouts/DisableRefreshLayout.vue';
 import CardForm from "~/page-components/intimacy-tool/Cards/Form.vue"
 import CardContentForm from "~/page-components/intimacy-tool/Cards/ContentForm.vue"
 import NoData from '~/page-components/intimacy-tool/NoData.vue';
-import ToolModal from '~/page-components/intimacy-tool/ToolModal.vue';
+import ToolContentModal from '~/page-components/intimacy-tool/ToolContentModal.vue';
 import DataAction from '~/page-components/intimacy-tool/DataAction.vue';
 import { useLocaleCards } from '~/hooks/locale-data/cards';
 
@@ -93,13 +93,13 @@ const handleSubmitContent = () => {
 
 <template>
 
-    <ToolModal v-model:open="openModal"
+    <ToolContentModal v-model:open="openModal"
                title="卡片内容"
                @submit="handleSubmitContent">
         <CardContentForm v-model:data="cardContent"
                          @submit="submitContent"
                          ref="contentForm" />
-    </ToolModal>
+    </ToolContentModal>
 
     <LazyUiConfirmModal v-model:open="confirmModal"
                         title="确认删除？"

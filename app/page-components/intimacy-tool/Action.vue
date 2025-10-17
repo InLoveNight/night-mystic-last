@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+/** 右上角按钮 action 下拉 */
+
 import type { DropdownMenuItem } from '@nuxt/ui';
 
 const props = defineProps<{

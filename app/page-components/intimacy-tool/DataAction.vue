@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+/** 数据下拉操作选择 */
+
 import type { DropdownMenuItem } from '@nuxt/ui';
 
 const emits = defineEmits<{

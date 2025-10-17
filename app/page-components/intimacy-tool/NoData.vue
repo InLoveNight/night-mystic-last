@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+/** 无数据 */
 
 defineProps<{
     result: string

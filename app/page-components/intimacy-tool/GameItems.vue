@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+/** 游戏列表 */
+
 import type { schemaCard } from '~~/shared/zod-schema';
 import DataAction from './DataAction.vue';
 

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+/** 离开页面确认弹窗 */
 
 const leaveConfirm = ref<boolean>()
 
