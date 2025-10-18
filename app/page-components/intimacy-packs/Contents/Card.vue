@@ -23,7 +23,7 @@ const computedData = computed(() => {
                     <UBadge v-if="item.time"
                             class="mr-1"
                             color="warning"
-                            icon="lucide:timer">
+                            icon="mingcute:stopwatch-fill">
                         {{ item.time }}
                     </UBadge>
                     {{ item.content }}

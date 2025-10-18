@@ -54,7 +54,7 @@ defineProps<{
         <div class="grid grid-cols-3 text-xs">
             <div v-if="game.cardTotal"
                  class=" inline-flex items-center gap-2">
-                <LazyUIcon name="lucide:wallet-cards" /> <span>{{ game.cardTotal }}</span>
+                <LazyUIcon name="mingcute:gift-card-fill" /> <span>{{ game.cardTotal }}</span>
             </div>
 
             <!-- <div v-if="item.data.truthTotal">

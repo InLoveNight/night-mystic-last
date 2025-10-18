@@ -12,7 +12,7 @@ const items = computed<DropdownMenuItem[]>(() => ([
 
 <template>
     <UDropdownMenu :items="items">
-        <UButton icon="lucide:languages"
+        <UButton icon="mingcute:translate-2-ai-fill"
                  aria-label="Change Language"
                  color="neutral"
                  variant="ghost" />

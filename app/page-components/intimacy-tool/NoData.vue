@@ -24,14 +24,14 @@ defineEmits<{
             <div class="flex justify-center gap-5 mt-5">
                 <UButton v-if="showNew"
                          color="secondary"
-                         icon="lucide:plus"
+                         icon="mingcute:plus-fill"
                          :to="newTo"
                          @click="$emit('new')">
                     {{ $t('action.new') }}
                 </UButton>
                 <UButton v-if="showImport"
                          color="secondary"
-                         icon="lucide:hard-drive-download"
+                         icon="mingcute:download-3-fill"
                          :to="importTo"
                          @click="$emit('import')">
                     {{ $t('action.import') }}

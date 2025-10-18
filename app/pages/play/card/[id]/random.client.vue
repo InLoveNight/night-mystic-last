@@ -64,7 +64,7 @@ const { playSetting } = usePlaySetting()
                         @back="() => $router.push($localePath('/intimacy-tool/cards'))">
             <template #right>
                 <div class="flex gap-5">
-                    <UIcon name="lucide:settings"
+                    <UIcon name="mingcute:settings-3-fill"
                            @click="settingOpen = true"
                            class="size-5 cursor-pointer" />
                 </div>

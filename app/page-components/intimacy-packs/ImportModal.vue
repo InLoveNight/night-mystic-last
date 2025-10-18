@@ -24,7 +24,7 @@ defineEmits<{
             <div class=" mt-5">
                 <div class="flex flex-col items-center mb-10">
                     <UIcon v-if="step.state === 'loading'"
-                           name="lucide:loader"
+                           name="mingcute:loading-3-fill"
                            class=" size-20 mb-5 animate-spin" />
                     <UIcon v-if="step.state === 'success'"
                            name="line-md:circle-filled-to-confirm-circle-filled-transition"

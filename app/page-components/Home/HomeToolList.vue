@@ -6,28 +6,28 @@ const list = ref([
         title: $t('intimacy-tool.items.card.name'),
         description: $t('intimacy-tool.items.card.description'),
         color: 'bg-emerald-500/40',
-        icon: 'streamline-stickies-color:validation-1-duo',
+        image: '/image/tools/card.png',
         to: '/intimacy-tool/cards'
     },
     {
         title: $t('intimacy-tool.items.truth-or-dare.name'),
         description: $t('intimacy-tool.items.truth-or-dare.description'),
         color: 'bg-pink-500/40',
-        icon: 'streamline-stickies-color:candy-cane',
+        image: '/image/tools/truth-or-dare.png',
         comingSoon: true
     },
     {
         title: $t('intimacy-tool.items.roulette.name'),
         description: $t('intimacy-tool.items.roulette.description'),
         color: 'bg-yellow-500/40',
-        icon: 'streamline-stickies-color:wand',
+        image: '/image/tools/roulette.png',
         comingSoon: true
     },
     {
         title: $t('intimacy-tool.home.more.title'),
         description: $t('intimacy-tool.home.more.description'),
         color: 'bg-purple-500/40',
-        icon: 'streamline-stickies-color:easter-egg'
+        image: '/image/tools/more.png',
     },
 ])
 
@@ -43,7 +43,8 @@ const list = ref([
                   :links="[
                     {
                         label: $t('menu.contact'),
-                        to: $localePath('/contact')
+                        to: $localePath('/contact'),
+                        trailingIcon: 'mingcute:mail-ai-fill'
                     }
                 ]">
         <ToolList :list="list"

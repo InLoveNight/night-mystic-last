@@ -16,6 +16,7 @@ const actions = ref<ButtonProps[]>([
     {
         label: '订阅',
         size: 'md',
+        icon: 'mingcute:celebrate-fill',
         onClick: open
     }
 ])

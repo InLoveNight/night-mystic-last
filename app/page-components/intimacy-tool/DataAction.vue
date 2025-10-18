@@ -10,15 +10,16 @@ const emits = defineEmits<{
 }>()
 
 const items = ref<DropdownMenuItem[]>([
-    { label: $t('action.edit'), icon: 'lucide:file-edit', onSelect: () => emits('edit') },
-    { label: $t('action.delete'), icon: 'lucide:trash-2', onSelect: () => emits('delete') },
+    { label: $t('action.edit'), icon: 'mingcute:edit-4-fill', onSelect: () => emits('edit') },
+    { label: $t('action.delete'), icon: 'mingcute:delete-2-fill', onSelect: () => emits('delete') },
 ])
 
 </script>
 
 <template>
-    <UDropdownMenu :items="items" arrow>
-        <UButton icon="lucide:more-horizontal"
+    <UDropdownMenu :items="items"
+                   arrow>
+        <UButton icon="mingcute:more-1-fill"
                  variant="subtle"
                  color="neutral"
                  class=""

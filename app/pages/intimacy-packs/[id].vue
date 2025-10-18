@@ -123,6 +123,7 @@ const handleImportModalClose = async () => {
             <LazyUPageHeader :description="game.data.description"
                              :links="[{
                                 label: '分享',
+                                icon: 'mingcute:share-forward-fill'
                             }]">
 
                 <template #title>

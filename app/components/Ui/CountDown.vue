@@ -86,7 +86,7 @@ onBeforeUnmount(() => {
 <template>
     <USeparator class=" mt-8">
         <div class="flex items-center gap-2">
-            <UIcon name="lucide:timer"
+            <UIcon name="mingcute:stopwatch-fill"
                    class="size-5" />
             <span>{{ $t('play.timer.timer') }}</span>
         </div>
@@ -103,7 +103,7 @@ onBeforeUnmount(() => {
                          :color="remaining === 0 ? 'neutral' : 'primary'"
                          :disabled="remaining === 0"
                          class="rounded-full text-center"
-                         :icon="isActive ? 'lucide:circle-pause' : 'lucide:circle-play'"
+                         :icon="isActive ? 'mingcute:pause-circle-fill' : 'mingcute:play-circle-fill'"
                          :ui="{ leadingIcon: 'size-8' }">
                 </UButton>
                 <p class=" text-xs">{{ $t(`play.timer.${actionLable}`) }}</p>
@@ -114,7 +114,7 @@ onBeforeUnmount(() => {
                 <UButton variant="ghost"
                          size="xl"
                          class="rounded-full text-center"
-                         icon="lucide:circle-stop"
+                         icon="mingcute:stop-circle-fill"
                          :ui="{ leadingIcon: 'size-8' }">
                 </UButton>
                 <p class=" text-xs">{{ $t('play.timer.reset') }}</p>

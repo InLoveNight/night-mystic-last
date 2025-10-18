@@ -6,8 +6,8 @@ defineProps<{
         title: string,
         description: string,
         color: string,
-        icon: string,
         to?: string,
+        image: string
         comingSoon?: boolean
     }[]
 }>()
@@ -18,7 +18,7 @@ defineProps<{
 <template>
     <div>
         <template v-for="item in list">
-            <div class="rounded-lg p-5 relative"
+            <div class="rounded-lg p-5 relative -z-2"
                  :class="item.comingSoon ? `${item.color} grayscale cursor-not-allowed` : `${item.color} cursor-pointer`"
                  @click="item.to ? $router.push($localePath(item.to)) : ''">
 
@@ -34,8 +34,9 @@ defineProps<{
 
                 <p class="text-[14px]/5 max-w-3/5 xl:max-w-4/5">{{ item.description }}</p>
 
-                <UIcon :name="item.icon"
-                       class="absolute right-5 -top-5 size-20"></UIcon>
+                <img class="absolute right-0 -top-8 size-35 -z-1"
+                     :src="item.image"
+                     :alt="item.title">
             </div>
         </template>
 

@@ -5,10 +5,10 @@ import type { NavigationMenuItem } from '@nuxt/ui';
 const localePath = useLocalePath()
 
 const menu = ref<NavigationMenuItem[]>([
-    { label: $t('menu.home'), icon: 'lucide:home', to: localePath('/') },
-    { label: $t('menu.intimacy-tool'), icon: 'lucide:candy', to: localePath('/intimacy-tool') },
-    { label: $t('menu.intimacy-packs'), icon: 'lucide:candy-cane', to: localePath('/intimacy-packs') },
-    { label: $t('menu.contact'), icon: 'lucide:mail', to: localePath('/contact') },
+    { label: $t('menu.home'), icon: 'mingcute:home-7-fill', to: localePath('/') },
+    { label: $t('menu.intimacy-tool'), icon: 'mingcute:love-fill', to: localePath('/intimacy-tool') },
+    { label: $t('menu.intimacy-packs'), icon: 'mingcute:lemon-squeezy-fill', to: localePath('/intimacy-packs') },
+    { label: $t('menu.contact'), icon: 'mingcute:mail-ai-fill', to: localePath('/contact') },
 ])
 
 </script>

@@ -27,7 +27,7 @@ const handleBack = () => {
             <div>
                 <slot name="left">
                     <UIcon @click="handleBack"
-                           name="lucide:chevron-left"
+                           name="mingcute:left-fill"
                            class=" block size-5 cursor-pointer">
                     </UIcon>
                 </slot>

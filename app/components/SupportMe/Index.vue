@@ -7,7 +7,7 @@
         <UButton color="neutral"
                  class="px-5 font-black"
                  size="lg"
-                 icon="lucide:coffee">
+                 icon="mingcute:bowl-2-fill">
             {{ $t('support-me.name') }}
         </UButton>
 
@@ -53,7 +53,7 @@
                                      alt="Support Me On Btc"
                                      :ui="{ icon: 'size-8' }" />
                             <UAvatar size="md"
-                                     icon="lucide:more-horizontal"
+                                     icon="mingcute:more-1-fill"
                                      alt="Support Me On Crypto"
                                      :ui="{ icon: 'size-5' }" />
                         </UAvatarGroup>

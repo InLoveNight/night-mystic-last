@@ -23,7 +23,7 @@ const open = defineModel('open', { default: false })
                         variant="soft"
                         :title="$t('play.setting.bg.title')"
                         :description="$t('play.setting.bg.description')"
-                        icon="lucide:slack"
+                        icon=":mingcute:apple-intelligence-fill"
                         orientation="horizontal"
                         :ui="{ description: 'text-xs' }">
                     <template #actions>
@@ -35,7 +35,7 @@ const open = defineModel('open', { default: false })
                         variant="soft"
                         :title="$t('play.setting.ringtone.title')"
                         :description="$t('play.setting.ringtone.description')"
-                        icon="lucide:bell-ring"
+                        icon="mingcute:bell-ringing-fill"
                         orientation="horizontal"
                         :ui="{ description: 'text-xs' }">
                     <template #actions>
@@ -47,7 +47,7 @@ const open = defineModel('open', { default: false })
                         variant="soft"
                         :title="$t('play.setting.count.title')"
                         :description="$t('play.setting.count.description')"
-                        icon="lucide:flag-triangle-right"
+                        icon="mingcute:counter-2-fill"
                         orientation="horizontal"
                         :ui="{ description: 'text-xs' }">
                     <template #actions>

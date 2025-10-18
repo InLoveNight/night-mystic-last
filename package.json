@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "@iconify-json/circle-flags": "^1.2.9",
-    "@iconify-json/lucide": "^1.2.69"
+    "@iconify-json/mingcute": "^1.2.5"
   }
 }

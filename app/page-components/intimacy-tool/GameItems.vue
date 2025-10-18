@@ -63,7 +63,7 @@ const deleteConfirmModal = ref<boolean>(false)
                      class="flex justify-end flex-1/2 mr-5">
                     <div v-if="type === 'cards'"
                          class=" inline-flex items-center gap-2">
-                        <LazyUIcon name="lucide:wallet-cards" /> <span>{{ item.contents.length }}</span>
+                        <LazyUIcon name="mingcute:gift-card-fill" /> <span>{{ item.contents.length }}</span>
                     </div>
                 </div>
 

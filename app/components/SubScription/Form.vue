@@ -10,8 +10,9 @@
             <UFormField class="w-full">
                 <UInput size="xl" />
             </UFormField>
-            <UButton size="xl"
-                     class=" shrink-0">
+            <UButton size="lg"
+                     class=" shrink-0"
+                     icon="mingcute:celebrate-fill">
                 订阅
             </UButton>
         </UForm>
