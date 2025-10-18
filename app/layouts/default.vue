@@ -21,5 +21,6 @@ useSeoMeta({
 </script>
 
 <template>
+    <SubScriptionModal />
     <slot />
 </template>

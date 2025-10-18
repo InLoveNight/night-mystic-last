@@ -122,7 +122,7 @@ const handleImportModalClose = async () => {
         <LazyUContainer>
             <LazyUPageHeader :description="game.data.description"
                              :links="[{
-                                label: '分享'
+                                label: '分享',
                             }]">
 
                 <template #title>

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
-import SubScription from '~/page-components/Home/SubScription.vue';
+import useSubScription from '~/hooks/useSubScription';
+
+const { open, openModal } = useSubScription()
 
 const items: NavigationMenuItem[] = [
     {
@@ -19,10 +21,15 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-    <UFooter :ui="{ top: 'py-0 lg:py-0 mt-10' }">
+    <UFooter :ui="{ top: 'py-0 lg:py-0 mt-10', root: 'bg-muted' }">
 
         <template #top>
-            <SubScription />
+            <SubScriptionSection>
+                <div class="space-y-3">
+                    <SubScriptionForm @click="open" />
+                    <SubScriptionSocial />
+                </div>
+            </SubScriptionSection>
         </template>
 
         <template #left>

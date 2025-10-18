@@ -31,5 +31,10 @@ export default defineNuxtConfig({
     },
     devServer: {
         host: '0.0.0.0'
+    },
+    runtimeConfig: {
+        public: {
+            feedBackUrl: 'https://night-mystic.canny.io/feedback'
+        }
     }
 })

@@ -16,8 +16,8 @@
         "description": "Elevate your intimate moments, whether solo, with a partner, or exploring creatively. Data stored locally, no login required, ensuring complete privacy. Unlock mystical nights with endless personalization."
     },
     "banner": {
-        "title": "We recommend reading 'How to use' before getting started.",
-        "action1-label": "How To Use"
+        "title": "Welcome to Night Mystic!",
+        "action1-label": "Feedback"
     },
     "action": {
         "add": "Add",
@@ -37,6 +37,13 @@
         "search-no-data": "No data found."
     },
     "intimacy-tool": {
+        "home": {
+            "description": "The top priority of our intimate toolkit is ensuring user privacy while offering maximum freedom. Create your own gameplay tailored to your preferences! If you have great ideas, feel free to contact us to co-create your ideal intimate tools.",
+            "more": {
+                "title": "View All",
+                "description": "Here you can explore and use all our intimate tools for free."
+            }
+        },
         "header": {
             "title": "Intimate Tools",
             "description": "We're constantly adding new intimate tools to enrich your experience ~"

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import BaseLayout from '~/layouts/BaseLayout.vue';
 import ToolList from '~/page-components/intimacy-tool/ToolList.vue';
-import SubScription from '~/page-components/Home/SubScription.vue';
 
 const list = ref([
     {

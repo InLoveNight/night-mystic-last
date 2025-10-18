@@ -24,8 +24,8 @@ const list = ref([
         comingSoon: true
     },
     {
-        title: '查看所有亲密工具',
-        description: '在这里您可以查看并免费使用我们的所有亲密工具',
+        title: $t('intimacy-tool.home.more.title'),
+        description: $t('intimacy-tool.home.more.description'),
         color: 'bg-purple-500/40',
         icon: 'streamline-stickies-color:easter-egg'
     },
@@ -34,18 +34,16 @@ const list = ref([
 </script>
 
 <template>
-    <UPageSection title="亲密工具"
-                  description="亲密工具的首要因素是保证使用者隐私，并且提供最大限度的自由度。由用户自己去创建更适合自己的玩法！ 欢迎 订阅我们。 如果您有更好的想法，欢迎联系我们，一起来创造属于我们自己的亲密工具。"
+    <UPageSection :title="$t('intimacy-tool.header.title')"
+                  :description="$t('intimacy-tool.home.description')"
                   orientation="horizontal"
                   reverse
                   variant="naked"
                   :ui="{ title: 'text-xl sm:text-2xl lg:text-3xl', container: 'lg:grid-cols-3' }"
                   :links="[
                     {
-                        label: '联系我们'
-                    },
-                    {
-                        label: '立即订阅'
+                        label: $t('menu.contact'),
+                        to: $localePath('/contact')
                     }
                 ]">
         <ToolList :list="list"

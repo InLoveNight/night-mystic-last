@@ -1,17 +1,28 @@
 <script lang="ts" setup>
 import type { ButtonProps } from '@nuxt/ui';
+import useSubScription from '~/hooks/useSubScription';
 
-const path = useLocalePath()
+const { open } = useSubScription()
+
+const config = useRuntimeConfig()
 
 const actions = ref<ButtonProps[]>([
     {
         label: $t('banner.action1-label'),
         size: 'md',
+        to: config.public.feedBackUrl,
+        target: "_blank"
+    },
+    {
+        label: '订阅',
+        size: 'md',
+        onClick: open
     }
 ])
 
-const { showBanner = true } = defineProps<{
+const { showBanner = true, showFooter = true } = defineProps<{
     showBanner?: boolean
+    showFooter?: boolean
 }>()
 
 </script>
@@ -22,8 +33,8 @@ const { showBanner = true } = defineProps<{
              :actions="actions"
              :ui="{ center: 'justify-between w-full', title: 'text-ellipsis', root: 'py-2' }" />
     <slot name="header" />
-    <UMain>
+    <UMain class="min-h-[calc(100dvh-360px)]">
         <slot />
     </UMain>
-    <LazyFooter />
+    <LazyFooter v-if="showFooter" />
 </template>

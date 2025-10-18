@@ -52,7 +52,7 @@ watch(() => locale, () => {
 </script>
 
 <template>
-    <BaseLayout :show-banner="false">
+    <BaseLayout>
         <template #header>
             <LazyHeaderGlobal>
                 <template #right-action>
@@ -63,12 +63,7 @@ watch(() => locale, () => {
 
         <LazyUContainer>
             <LazyUPageHeader :title="$t('intimacy-packs.header.title')"
-                             :description="$t('intimacy-packs.header.description')"
-                             :links="[{
-                                label: $t('banner.action1-label'),
-                                trailingIcon: 'lucide:message-circle-question-mark',
-                                variant: 'soft'
-                            }]">
+                             :description="$t('intimacy-packs.header.description')">
 
             </LazyUPageHeader>
 

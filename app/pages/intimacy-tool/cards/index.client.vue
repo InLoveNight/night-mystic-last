@@ -45,7 +45,8 @@ const handlePlay = (id: string) => {
         </template>
     </LazyUModal>
 
-    <BaseLayout :show-banner="false">
+    <BaseLayout :show-banner="false"
+                :show-footer="false">
         <LazyHeaderWithBack :default-back-action="false"
                             @back="$router.push($localePath('/intimacy-tool'))">
             <template #right>

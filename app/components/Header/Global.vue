@@ -8,7 +8,7 @@ const menu = ref<NavigationMenuItem[]>([
     { label: $t('menu.home'), icon: 'lucide:home', to: localePath('/') },
     { label: $t('menu.intimacy-tool'), icon: 'lucide:candy', to: localePath('/intimacy-tool') },
     { label: $t('menu.intimacy-packs'), icon: 'lucide:candy-cane', to: localePath('/intimacy-packs') },
-    { label: $t('menu.contact'), icon: 'lucide:mail' },
+    { label: $t('menu.contact'), icon: 'lucide:mail', to: localePath('/contact') },
 ])
 
 </script>
