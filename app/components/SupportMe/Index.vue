@@ -36,8 +36,9 @@
                              srcset="">
                     </NuxtLink>
 
-                    <div
-                         class=" bg-accented dark:bg-white/90 px-5 py-4 rounded-lg flex items-center justify-center cursor-pointer">
+                    <NuxtLink to="https://plisio.net/donate/P3CY8G-o"
+                              target="_blank"
+                              class=" bg-accented dark:bg-white/90 px-5 py-4 rounded-lg flex items-center justify-center cursor-pointer">
                         <UAvatarGroup>
                             <UAvatar size="md"
                                      icon="cryptocurrency-color:usdt"
@@ -56,9 +57,9 @@
                                      alt="Support Me On Crypto"
                                      :ui="{ icon: 'size-5' }" />
                         </UAvatarGroup>
-                    </div>
+                    </NuxtLink>
 
-                    <div
+                    <!-- <div
                          class=" bg-accented dark:bg-white/90 px-5 py-4 rounded-lg flex items-center justify-center cursor-pointer">
                         <UAvatarGroup>
                             <UAvatar size="md"
@@ -70,7 +71,7 @@
                                      alt="Romain Hamel"
                                      :ui="{ icon: 'size-9 bg-blue-500' }" />
                         </UAvatarGroup>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
